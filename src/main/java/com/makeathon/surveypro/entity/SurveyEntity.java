@@ -8,10 +8,11 @@ import java.util.Date;
 public class SurveyEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "surveyid")
+    @Column(name = "survey_id")
     private int surveyId;
-    @OneToMany(cascade = CascadeType.ALL)
-    private UserEntity user;
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    private User user;
     private String surveyName;
     private String surveyDesc;
     @Temporal(value = TemporalType.DATE)
@@ -28,11 +29,11 @@ public class SurveyEntity {
         this.surveyId = surveyId;
     }
 
-    public UserEntity getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(UserEntity user) {
+    public void setUser(User user) {
         this.user = user;
     }
 

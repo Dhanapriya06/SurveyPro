@@ -7,33 +7,33 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("surveyService")
-public class SurveyServiceImpl implements SurveyService{
-    @Autowired
-    SurveyRepository surveyRepository;
 
-    @Override
-    public void insertSurvey(SurveyEntity survey) {
-        surveyRepository.saveAndFlush(survey);
-    }
-
-    @Override
-    public void updateSurvey(int surveyId) {
-        SurveyEntity survey = surveyRepository.findBySurveyId(surveyId);
-    }
-
-    @Override
-    public List<SurveyEntity> getSurveyByUserId(int userId) {
-        return surveyRepository.findByUserId(userId);
-    }
-
-    @Override
-    public SurveyEntity getSurveyBySurveyId(int surveyId) {
-        return surveyRepository.findBySurveyId(surveyId);
-    }
-
-    @Override
-    public void deleteSurvey(int surveyId) {
-        surveyRepository.deleteById(surveyId);
-    }
+public class SurveyServiceImpl {
+//    @Autowired
+//    SurveyRepository surveyRepository;
+//
+//    @Override
+//    public void insertSurvey(SurveyEntity survey) {
+//        surveyRepository.saveAndFlush(survey);
+//    }
+//
+//    @Override
+//    public void updateSurvey(int surveyId) {
+//        SurveyEntity survey = surveyRepository.findBySurveyId(surveyId);
+//    }
+//
+//    @Override
+//    public List<SurveyEntity> getSurveyByUserId(int userId) {
+//        return surveyRepository.findByUserId(userId);
+//    }
+//
+//    @Override
+//    public SurveyEntity getSurveyBySurveyId(int surveyId) {
+//        return surveyRepository.findBySurveyId(surveyId);
+//    }
+//
+//    @Override
+//    public void deleteSurvey(int surveyId) {
+//        surveyRepository.deleteById(surveyId);
+//    }
 }
