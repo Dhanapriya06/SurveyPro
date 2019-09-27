@@ -7,7 +7,7 @@ import javax.validation.constraints.Size;
 
 public class LoginRequest {
 
-    @Size(min = 4, max = 50, message = ValidationError.INVALID_USERNAME_LENGTH_KEY)
+    @Size(min = 2, max = 50, message = ValidationError.INVALID_USERNAME_LENGTH_KEY)
     private String username;
 
     @Size(min = 8, max = 50, message = ValidationError.INVALID_PASSWORD_LENGTH_KEY)
