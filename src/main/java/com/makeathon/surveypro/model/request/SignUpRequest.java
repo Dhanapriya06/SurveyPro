@@ -5,20 +5,25 @@ import com.makeathon.surveypro.util.ValidationError;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 public class SignUpRequest {
 
-    @Size(min = 4, max = 50, message = ValidationError.INVALID_EMAIL_LENGTH_KEY)
+    @Size(min = 6, max = 50, message = ValidationError.INVALID_EMAIL_LENGTH_KEY)
+    @NotEmpty
     private String email;
 
-    @Size(min = 4, max = 50, message = ValidationError.INVALID_USERNAME_LENGTH_KEY)
+    @Size(min = 2, max = 50, message = ValidationError.INVALID_USERNAME_LENGTH_KEY)
+    @NotEmpty
     private String username;
 
     @Size(min = 8, max = 50, message = ValidationError.INVALID_PASSWORD_LENGTH_KEY)
+    @NotEmpty
     private String password;
 
     @Size(min = 4, max = 10, message = ValidationError.INVALID_ROLE_LENGTH_KEY)
+    @NotEmpty
     private String role;
 
     public String getEmail() {
