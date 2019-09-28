@@ -11,7 +11,7 @@ public class SurveyEntity {
     @Column(name = "survey_id")
     private int surveyId;
     @ManyToOne
-    @JoinColumn(name="user_id")
+    @JoinColumn(name = "user_id")
     private User user;
     private String surveyName;
     private String surveyDesc;

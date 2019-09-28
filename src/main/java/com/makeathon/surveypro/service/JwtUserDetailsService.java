@@ -6,7 +6,6 @@ import com.makeathon.surveypro.exception.RoleNotFoundException;
 import com.makeathon.surveypro.exception.UserAlreadyExistException;
 import com.makeathon.surveypro.exception.UserNotFoundException;
 import com.makeathon.surveypro.model.request.SignUpRequest;
-
 import com.makeathon.surveypro.repository.RoleRepository;
 import com.makeathon.surveypro.repository.UserRepository;
 import com.makeathon.surveypro.security.UserPrincipal;

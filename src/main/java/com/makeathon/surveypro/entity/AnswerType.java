@@ -1,19 +1,15 @@
 package com.makeathon.surveypro.entity;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 @Entity
 public class AnswerType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "answertype_id")
     private long answerTypeId;
-
-    @NotBlank
-    @Size(min = 3)
-    private String username;
+    private String answerTypeName;
 
     public long getAnswerTypeId() {
         return answerTypeId;
@@ -23,11 +19,11 @@ public class AnswerType {
         this.answerTypeId = answerTypeId;
     }
 
-    public String getUsername() {
-        return username;
+    public String geteAnswerTypeName() {
+        return answerTypeName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setAnswerTypeName(String username) {
+        this.answerTypeName = answerTypeName;
     }
 }

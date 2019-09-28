@@ -8,8 +8,9 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface SurveyRepository extends JpaRepository<SurveyEntity,Integer> {
+public interface SurveyRepository extends JpaRepository<SurveyEntity, Integer> {
     List<SurveyEntity> findByUser_UserId(int userId);
+
     @Override
     Optional<SurveyEntity> findById(Integer integer);
 }

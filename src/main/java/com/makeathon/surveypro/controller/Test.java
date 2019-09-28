@@ -2,11 +2,9 @@ package com.makeathon.surveypro.controller;
 
 import com.makeathon.surveypro.security.CurrentUser;
 import com.makeathon.surveypro.security.UserPrincipal;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
-import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1")

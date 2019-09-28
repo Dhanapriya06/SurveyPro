@@ -1,6 +1,5 @@
 package com.makeathon.surveypro.model.request;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class QuestionRequest {
@@ -34,4 +33,6 @@ public class QuestionRequest {
     public void setQuestionOptions(List<String> questionOptions) {
         this.questionOptions = questionOptions;
     }
+
+
 }

@@ -8,7 +8,7 @@ public class UserNotFoundException extends UsernameNotFoundException {
 
     public UserNotFoundException(String message, int errorCode) {
         super("User not found with id " + message);
-        this.errorCode=errorCode;
+        this.errorCode = errorCode;
     }
 
     public int getErrorCode() {

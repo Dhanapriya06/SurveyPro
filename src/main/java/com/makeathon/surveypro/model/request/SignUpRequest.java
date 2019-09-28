@@ -3,8 +3,6 @@ package com.makeathon.surveypro.model.request;
 
 import com.makeathon.surveypro.util.ValidationError;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
