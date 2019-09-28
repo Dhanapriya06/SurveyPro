@@ -12,17 +12,16 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class
-SurveyServiceImpl implements SurveyService {
+public class SurveyServiceImpl implements SurveyService {
     @Autowired
     SurveyRepository surveyRepository;
     @Autowired
     UserRepository userRepository;
 
     @Override
-    public SurveyEntity insertSurvey(SurveyRequest survey) {
+    public SurveyEntity insertSurvey(SurveyRequest survey, long userId) {
         SurveyEntity se = survey.toSurveyEntity();
-        User user = userRepository.findByUserId(1L).get();
+        User user = userRepository.findByUserId(userId).get();
         se.setUser(user);
         SurveyEntity se1 = surveyRepository.save(se);
         return se1;

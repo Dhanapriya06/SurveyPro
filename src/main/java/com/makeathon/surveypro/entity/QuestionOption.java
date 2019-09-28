@@ -8,9 +8,11 @@ public class QuestionOption {
     @Column(name = "questionoption_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int questionOptionId;
+
     @ManyToOne
     @JoinColumn(name = "survey_question_id")
     private SurveyQuestion survey;
+
     private String optionValue;
 
     public int getQuestionOptionId() {

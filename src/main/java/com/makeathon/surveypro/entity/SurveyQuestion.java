@@ -5,14 +5,18 @@ import javax.persistence.*;
 @Entity
 @Table(name = "SURVEY_QUESTION")
 public class SurveyQuestion {
+
     @Id
     @Column(name = "survey_question_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int surveyQuestionId;
+
+    private String question;
+
     @ManyToOne
     @JoinColumn(name = "survey_id")
     private SurveyEntity survey;
-    private String question;
+
     @ManyToOne
     @JoinColumn(name = "answertype_id")
     private AnswerType answerType;

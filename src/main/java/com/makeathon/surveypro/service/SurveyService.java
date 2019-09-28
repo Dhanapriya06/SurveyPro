@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface SurveyService {
-    public SurveyEntity insertSurvey(SurveyRequest survey);
+    public SurveyEntity insertSurvey(SurveyRequest survey, long userId);
 
     public List<Object> getAllOpenSurveys();
 

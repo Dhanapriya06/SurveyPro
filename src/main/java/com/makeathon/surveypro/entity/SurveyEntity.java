@@ -6,19 +6,26 @@ import java.util.Date;
 @Entity
 @Table(name = "SURVEY_DETAILS")
 public class SurveyEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "SURVEY_DETAILS")
     private int surveyId;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
     private String surveyName;
+
     private String surveyDesc;
+
     @Temporal(value = TemporalType.DATE)
     private Date startDate;
+
     @Temporal(value = TemporalType.DATE)
     private Date endDate;
+
     private boolean isOpen;
 
     public int getSurveyId() {

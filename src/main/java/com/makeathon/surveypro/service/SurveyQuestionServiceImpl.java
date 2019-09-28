@@ -25,8 +25,7 @@ public class SurveyQuestionServiceImpl implements SurveyQuestionService {
 
     @Override
     public void addAllQuestion(List<QuestionRequest> questions, SurveyEntity surveyId) {
-        for (QuestionRequest question : questions
-        ) {
+        for (QuestionRequest question : questions) {
             SurveyQuestion sq = new SurveyQuestion();
             sq.setSurvey(surveyId);
             sq.setQuestion(question.getQuestion());
@@ -34,16 +33,14 @@ public class SurveyQuestionServiceImpl implements SurveyQuestionService {
             sq.setAnswerType(at.get());
             SurveyQuestion sq1 = surveyQuestionRepository.save(sq);
             List<String> list = question.getQuestionOptions();
-            for (String s : list
-            ) {
+            for (String s : list) {
                 QuestionOption option = new QuestionOption();
                 option.setSurvey(sq1);
                 option.setOptionValue(s);
                 System.out.println(s);
                 questionOptionRepository.save(option);
                 List<QuestionOption> q = questionOptionRepository.findAll();
-                for (QuestionOption qqq : q
-                ) {
+                for (QuestionOption qqq : q) {
                     System.out.println(qqq.getOptionValue());
                 }
             }
