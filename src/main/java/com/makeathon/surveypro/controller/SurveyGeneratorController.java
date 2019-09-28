@@ -1,21 +1,19 @@
 package com.makeathon.surveypro.controller;
 
+import com.makeathon.surveypro.model.request.SurveyRequest;
 import com.makeathon.surveypro.security.CurrentUser;
 import com.makeathon.surveypro.security.UserPrincipal;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import java.util.List;
-
 @RestController
 @RequestMapping("/api/v1")
-public class Test {
+public class SurveyGeneratorController {
 
 
-    @GetMapping("/getHello")
-    public String getAchievementListByUserId(@CurrentUser UserPrincipal userPrincipal) {
-        System.out.println(userPrincipal.getEmail() + " " + userPrincipal.getUsername());
+    @PostMapping("/create/survey")
+    public String getAchievementListByUserId(@RequestBody SurveyRequest surveyRequest) {
+        System.out.println(surveyRequest);
         return "hello";
     }
 
