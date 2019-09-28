@@ -8,7 +8,7 @@ import java.util.Date;
 public class SurveyEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "survey_id")
+    @Column(name = "SURVEY_DETAILS")
     private int surveyId;
     @ManyToOne
     @JoinColumn(name = "user_id")

@@ -8,10 +8,7 @@ import com.makeathon.surveypro.service.SurveyQuestionServiceImpl;
 import com.makeathon.surveypro.service.SurveyServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,6 +27,12 @@ public class SurveyGeneratorController {
         List<QuestionRequest> list = surveyRequest.getQuestionRequestList();
         surveyQuestionServiceImpl.addAllQuestion(list, surveyId);
         return ResponseEntity.ok(new APIResponse(false, "Survey created successfully"));
+    }
+
+    @GetMapping("get/allOpenSurveys")
+    public ResponseEntity<?> getAllOpenSurveys(){
+
+        return ResponseEntity.ok(surveyServiceImpl.getAllOpenSurveys());
     }
 
 }

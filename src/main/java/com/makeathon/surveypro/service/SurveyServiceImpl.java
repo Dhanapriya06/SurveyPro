@@ -29,6 +29,12 @@ SurveyServiceImpl implements SurveyService {
     }
 
     @Override
+    public List<Object> getAllOpenSurveys() {
+        return surveyRepository.findAllOpenSurveys();
+    }
+
+
+    @Override
     public void updateSurvey(int surveyId) {
         surveyRepository.findById(surveyId);
     }

@@ -9,6 +9,8 @@ import java.util.Optional;
 public interface SurveyService {
     public SurveyEntity insertSurvey(SurveyRequest survey);
 
+    public List<Object> getAllOpenSurveys();
+
     public void updateSurvey(int surveyId);
 
     public List<SurveyEntity> getSurveyByUserId(int userId);
